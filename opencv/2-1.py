@@ -1,16 +1,17 @@
-import sys
-
 import cv2 as cv
-import matplotlib
 import numpy as np
-'''
-print(sys.version)
-print(cv.__version__)
-print(np.__version__)
-print(matplotlib.__version__)
-'''
+import matplotlib.pyplot as plt
 
-img = cv.imread('1.jpg',0)
+img = cv.imread('2.jpeg',1)
+if img is None:
+    print('the file path is wrong')
+
+'''    
 cv.imshow('image',img)
 cv.waitKey(0)
-cv.destroyAllWindows()
+cv.destroyWindow('image')
+'''
+plt.imshow(img,cmap='gray',interpolation='bicubic')
+plt.xticks([]),plt.yticks([])
+plt.show()
+
