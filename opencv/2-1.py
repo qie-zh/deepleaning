@@ -1,6 +1,8 @@
+#图像处理
+
 import cv2 as cv
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
 
 img = cv.imread('2.jpeg',1)
 if img is None:
